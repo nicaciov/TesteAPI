@@ -1,6 +1,40 @@
 @TesteAPI_HostAddress = http://localhost:5151
 
-GET {{TesteAPI_HostAddress}}/get/
+### GET /api/Products
+GET {{TesteAPI_HostAddress}}/api/Products
 Accept: application/json
 
 ###
+
+### GET /api/Products/{id}
+GET {{TesteAPI_HostAddress}}/api/Products/1
+Accept: application/json
+
+###
+
+### POST /api/Products
+POST {{TesteAPI_HostAddress}}/api/Products
+Content-Type: application/json
+
+{
+    "Id": 4,
+    "Name": "New Product",
+    "Price": 25.99
+}
+
+###
+
+### PUT /api/Products/{id}
+PUT {{TesteAPI_HostAddress}}/api/Products/4
+Content-Type: application/json
+
+{
+    "Id": 4,
+    "Name": "Updated Product",
+    "Price": 29.99
+}
+
+###
+
+### DELETE /api/Products/{id}
+DELETE {{TesteAPI_HostAddress}}/api/Products/4
